@@ -19,31 +19,44 @@ admin.site.register(ActivityModel)
 admin.site.register(Weekend)
 admin.site.register(PartnersModel)
 admin.site.register(ManagementModel)
+admin.site.register(CorruptionModel)
+
 
 @admin.register(Announce)
 class AnnounceAdmin(admin.ModelAdmin):
-    readonly_fields = ('picture_count', )
+    readonly_fields = ("picture_count",)
 
 
 @admin.register(OpenDataFiles)
 class OpenDataFilesAdmin(admin.ModelAdmin):
-    readonly_fields = ('size', )
+    readonly_fields = ("size",)
+
+
+@admin.register(CorruptionFiles)
+class CorruptionFilesAdmin(admin.ModelAdmin):
+    readonly_fields = ("size",)
+
 
 @admin.register(FinanceFiles)
 class FinanceFilesAdmin(admin.ModelAdmin):
-    readonly_fields = ('size', )
+    readonly_fields = ("size",)
+
 
 @admin.register(LegalStatusFiles)
 class LegalStatusFilesAdmin(admin.ModelAdmin):
-    readonly_fields = ('size', )
+    readonly_fields = ("size",)
+
+
 @admin.register(StructureFiles)
 class StructureFilesAdmin(admin.ModelAdmin):
-    readonly_fields = ('size', )
+    readonly_fields = ("size",)
+
 
 @admin.register(NewsModel)
 class NewsAdmin(admin.ModelAdmin):
-    readonly_fields = ('picture_count', )
+    readonly_fields = ("picture_count",)
+
 
 @admin.register(PhotoGalery)
 class PhotoGaleryAdmin(admin.ModelAdmin):
-    readonly_fields = ('picture_count',)
+    readonly_fields = ("picture_count",)
