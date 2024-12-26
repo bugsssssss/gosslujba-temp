@@ -1447,6 +1447,30 @@ class OpenDataFilesView(APIView):
             status=200
         )
 
+class CorruptionFilesView(APIView):
+    def get(self, request):
+        corruption_files = CorruptionFiles.objects.all()
+
+        serializer = CorruptionFilesSerializer(corruption_files, many=True, context={"request": request})
+
+        return SuccessResponse(
+            data=serializer.data,
+            message="Corruption successfully retrieved",
+            status=200
+        )
+        
+class CorruptionView(APIView):
+    def get(self, request):
+        corruption = CorruptionModel.objects.last()
+
+        serializer = CorruptionSerializer(corruption, context={"request": request})
+
+        return SuccessResponse(
+            data=serializer.data,
+            message="Corruption info successfully retrieved",
+            status=200
+        )
+
 class FinanceFilesView(APIView):
     def get(self, request):
         finance_files = FinanceFiles.objects.all()
@@ -1602,7 +1626,6 @@ class GetAnnounceView(APIView):
             path=request.path,
             method=request.method
         )
-
 
 class PartnerView(APIView):
     def get(self, request):
