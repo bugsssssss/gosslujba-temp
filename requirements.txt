@@ -1,0 +1,16 @@
+Django==3.2.16
+djangorestframework==3.14.0
+django-admin-interface==0.28.3
+django-admin-autocomplete-filter==0.7.1
+django-jazzmin==2.6.0
+django-grappelli==3.0.8
+Pillow==10.0.1
+django-cors-headers==4.3.0
+python-docx==1.1.0
+admin-tools==0.1
+django-admin-tools==0.9.3
+django-object-tools==2.0.0
+django-filter
+drf-yasg
+django-ckeditor
+django-unfold==0.22.0
